@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  background-color: hsl(0, 100%, 74%);
+  background-image: url(images/bg-intro-mobile.png);
+}
+
+.main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.left,
+.right {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 90vh;
+}
+
+.left {
+  padding: 9rem 2rem 9rem 16rem;
+  gap: 30px;
+  color: white;
+}
+
+.left h1 {
+  font-size: 40px;
+  line-height: 110%;
+}
+
+.left p {
+  font-size: 13px;
+  line-height: 170%;
+}
+
+.offer {
+  background-color: hsl(248, 32%, 49%);
+  color: white;
+  text-align: center;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0px 7px 0px rgba(0, 0, 0, 0.2);
+  font-weight: 400;
+}
+
+.offer span {
+  font-weight: 700;
+}
+
+.right {
+  width: 70%;
+  gap: 15px;
+}
+
+.card {
+  padding: 2rem;
+  border-radius: 5px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.card input {
+  padding: 10px 10px 10px 20px;
+  border-radius: 5px;
+  border: 2px solid #e8e8ee;
+}
+
+.card input:focus-visible {
+  border: 1px solid hsl(248, 32%, 49%) !important;
+  outline: none;
+}
+
+.card input:invalid {
+  border: 2px solid hsl(0, 100%, 74%) !important;
+  outline: none;
+}
+
+.card input:empty.touched {
+  border: 2px solid hsl(0, 100%, 74%) !important;
+  outline: none;
+}
+
+.card input::placeholder {
+  color: hsl(249, 10%, 26%, 0.6);
+  font-weight: 600;
+}
+
+.card button {
+  text-transform: uppercase;
+  background-color: hsl(154, 59%, 51%);
+  color: white;
+  text-align: center;
+  padding: 12px;
+  border-radius: 5px;
+  box-shadow: 0px 7px 0px hsla(154, 59%, 51%, 0.2);
+  font-weight: 600;
+  outline: none;
+  border: none;
+}
+
+.terms {
+  text-align: center;
+  font-size: 10px;
+  color: hsl(246, 25%, 77%);
+}
+
+.terms span {
+  color: hsl(0, 100%, 74%);
+  font-weight: 700;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+input {
+  position: relative;
+}
+
+img {
+  position: absolute;
+  right: 22px;
+  top: 11px;
+  width: 20px;
+  display: none;
+}
+
+.error-prompts {
+  font-size: 10px;
+  text-align: right;
+  margin-top: 5px;
+  color: hsl(0, 100%, 74%);
+  font-weight: 500;
+  font-style: italic;
+  display: none;
+}
+
+@media (max-width: 375px) {
+  .main {
+    grid-template-columns: 1fr;
+  }
+
+  .left {
+    padding: 10px;
+    text-align: center;
+  }
+
+  .left h1 {
+    font-size: 22px;
+  }
+
+  .right {
+    width: 100%;
+    padding: 10px;
+  }
+
+  footer {
+    margin-top: 35px;
+  }
+}
